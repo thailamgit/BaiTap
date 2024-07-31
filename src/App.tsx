@@ -1,27 +1,19 @@
 import React from 'react';
-// Defining our App Component 
-
-const App = () => {
-   
-  const onInputWord: React.ChangeEventHandler<HTMLInputElement> = (event) => {
-    console.log(event.target.value);
-  }
-
-  console.log("test")
-
+function MyButton () {
   return (
-    <div>
-      <form>
-        <label>Enter text</label>
-        <input type="text"
-              onChange={onInputWord}
-        />
-      </form>
-    </div>
-  );
-
+    <button>
+      I'm a button
+    </button>
+  )
 }
 
+function MyApp () {
+  return (
+    <>
+      <h1>This is React</h1>
+      <MyButton/>
+    </>
+  )
+}
 
-// Exporting your Default App Component 
-export default App;
+export default MyApp
