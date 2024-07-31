@@ -7,6 +7,8 @@ const App = () => {
     console.log(event.target.value);
   }
 
+  console.log("test")
+
   return (
     <div>
       <form>
