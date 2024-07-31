@@ -4,9 +4,15 @@ const products = [
   {title: 'Cabbage', isFruit: false, id: 1},
   {title: 'Apple', isFruit: true, id: 2},
   {title: 'Banana', isFruit: true, id: 3},
+  {title: 'Garlic', isFruit: false, id: 4},
+  {title: 'Tomato', isFruit: false, id: 5},
 ]
 
-function ShoppingList () {
+function handleClick () {
+  alert("You clicked me!")
+}
+
+function shoppingList () {
   const listItem = products.map((product) => 
     <li key={product.id} 
         style={{
@@ -16,9 +22,13 @@ function ShoppingList () {
       {product.title}
     </li>
   )
-  return <ul>
-    {listItem}
-  </ul>
+  return <>
+    <ul>
+      {listItem}
+    </ul>
+    <button onClick={handleClick}>Click me</button>
+  </>
 }
 
-export default ShoppingList
+export default shoppingList
+
